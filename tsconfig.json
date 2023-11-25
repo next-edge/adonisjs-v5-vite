@@ -4,12 +4,6 @@
     "rootDir": "./",
     "outDir": "./build"
   },
-  "files": [
-    "./node_modules/@adonisjs/core/build/adonis-typings/index.d.ts",
-    "./node_modules/@adonisjs/application/build/adonis-typings/index.d.ts",
-    "./node_modules/@adonisjs/view/build/adonis-typings/index.d.ts",
-    "./node_modules/@adonisjs/shield/build/index.d.ts"
-  ],
-  "include": ["**/*"],
-  "exclude": ["build", "node_modules"]
+  "files": ["./node_modules/@adonisjs/application/build/adonis-typings/index.d.ts"],
+  "include": ["**/*"]
 }
