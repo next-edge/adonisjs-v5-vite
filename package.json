@@ -1,7 +1,7 @@
 {
   "name": "adonisjs-v5-vite",
   "description": "Vite plugin for Adonis.js v5",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "node": ">=18.16.0"
   },
@@ -23,6 +23,8 @@
     "./types": "./build/src/backend/types.js"
   },
   "scripts": {
+    "build": "npm run compile",
+    "compile": "npm run lint && npm run clean && tsc && npm run copy:templates",
     "clean": "del-cli build",
     "copy:templates": "copyfiles \"stubs/**/*.stub\" build",
     "typecheck": "tsc --noEmit",
@@ -33,12 +35,8 @@
     "quick:test": "node --enable-source-maps --loader=ts-node/esm bin/test.ts",
     "pretest": "npm run lint",
     "test": "c8 npm run quick:test",
-    "compile": "npm run lint && npm run clean && tsc && npm run copy:templates",
-    "build": "npm run compile",
-    "postbuild": "npm run copy:templates",
-    "release": "np",
-    "version": "npm run build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run lint && npm run clean",
+    "prepare": "npm run compile"
   },
   "adonisjs": {
     "types": "@next-edge/adoinsjs-v5-vite",
