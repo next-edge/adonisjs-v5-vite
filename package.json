@@ -17,6 +17,8 @@
   ],
   "exports": {
     ".": "./build/index.js",
+    "./package.json": "./package.json",
+    "./README.md": "./README.md",
     "./vite_provider": "./build/providers/vite_provider.js",
     "./client": "./build/src/client/main.js",
     "./plugins/edge": "./build/backend/plugins/edge.js",
