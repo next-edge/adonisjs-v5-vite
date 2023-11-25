@@ -1,3 +1,3 @@
-import ViteProvider from './ViteProvider.js'
+import ViteProvider from './vite_provider.js'
 
 export default ViteProvider
